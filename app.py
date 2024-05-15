@@ -12,9 +12,9 @@ stopwords = set(nltk.corpus.stopwords.words('english'))
 app = Flask(__name__)
 
 
-lg = pickle.load(open('logistic_regression.pkl','rb'))
-tfidf_vectorizer = pickle.load(open('tfidfvectorizer.pkl','rb'))
-lb = pickle.load(open('label_encoder.pkl','rb'))
+lg = pickle.load(open('models/logistic_regression.pkl','rb'))
+tfidf_vectorizer = pickle.load(open('models/tfidfvectorizer.pkl','rb'))
+lb = pickle.load(open('models/label_encoder.pkl','rb'))
 
 def clean_text(text):
     stemmer = PorterStemmer()
